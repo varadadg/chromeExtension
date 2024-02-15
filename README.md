@@ -138,3 +138,220 @@ const CircularMenu = () => {
 
 export default CircularMenu;
 
+
+
+
+import React from "react";
+
+const CircularMenu = () => {
+  return (
+    <nav
+      className="btn-pluss-wrapper"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        background: "salmon",
+        fontFamily: "sans-serif",
+      }}>
+      <style>
+        {`
+          @keyframes jump {
+            0% { 
+              transform: translateY(3px);
+            }
+            50% { 
+              transform: translateY(-15px);
+            }
+            100% { 
+              transform: translateY(3px);
+            }
+          }
+        `}
+      </style>
+      <h2
+        className="tooltip relative"
+        style={{
+          position: "relative",
+          padding: "5px",
+          borderRadius: "5px",
+          width: "70px",
+          textAlign: "center",
+          fontSize: "0.9rem",
+          fontWeight: "bold",
+          margin: "0 auto",
+          marginBottom: "15px",
+          animation: "jump 3s infinite",
+          backgroundColor: "#fff",
+          color: "#FA434B",
+          pointerEvents: "none",
+        }}>
+        Look!
+        <span
+          style={{
+            content: "''",
+            position: "absolute",
+            transform: "rotate(45deg)",
+            display: "block",
+            height: "10px",
+            width: "10px",
+            left: "0",
+            right: "0",
+            margin: "0 auto",
+            backgroundColor: "inherit",
+          }}></span>
+      </h2>
+      <div
+        className="btn-pluss"
+        style={{
+          overflow: "hidden",
+          position: "relative",
+          right: "38rem",
+          top: "2rem",
+          display: "block",
+          paddingLeft: "5px",
+          paddingRight: "5px",
+          borderRadius: "22px",
+          width: "30px",
+          margin: "0 auto",
+          backgroundColor: "white",
+          transition: "width .3s .5s ease, borderRadius 1.1s ease",
+          cursor: "pointer",
+        }}>
+        <ul
+          style={{
+            opacity: "0",
+            marginTop: "15px",
+            width: "100%",
+            marginLeft: "0px",
+            textAlign: "center",
+            fontSize: "0.9rem",
+            transition: "all 1s ease",
+          }}>
+          <li
+            style={{
+              backgroundColor: "#e4e4e4",
+              marginTop: "5px",
+              borderRadius: "5px",
+              width: "100%",
+              height: "0px",
+              overflow: "hidden",
+              transition: "height 1s ease",
+            }}>
+            <a
+              href="#about"
+              style={{
+                display: "block",
+                position: "relative",
+                color: "#FA434B",
+                textDecoration: "none",
+                overflow: "hidden",
+                padding: "5px",
+                borderRadius: "5px",
+                transition: "all .5s ease",
+              }}>
+              About me
+            </a>
+          </li>
+          <li
+            style={{
+              backgroundColor: "#e4e4e4",
+              marginTop: "5px",
+              borderRadius: "5px",
+              width: "100%",
+              height: "0px",
+              overflow: "hidden",
+              transition: "height 1s ease",
+            }}>
+            <a
+              href="#blog"
+              style={{
+                display: "block",
+                position: "relative",
+                color: "#FA434B",
+                textDecoration: "none",
+                overflow: "hidden",
+                padding: "5px",
+                borderRadius: "5px",
+                transition: "all .5s ease",
+              }}>
+              Blog
+            </a>
+          </li>
+          <li
+            style={{
+              backgroundColor: "#e4e4e4",
+              marginTop: "5px",
+              borderRadius: "5px",
+              width: "100%",
+              height: "0px",
+              overflow: "hidden",
+              transition: "height 1s ease",
+            }}>
+            <a
+              href="#projects"
+              style={{
+                display: "block",
+                position: "relative",
+                color: "#FA434B",
+                textDecoration: "none",
+                overflow: "hidden",
+                padding: "5px",
+                borderRadius: "5px",
+                transition: "all .5s ease",
+              }}>
+              Projects
+            </a>
+          </li>
+          <li
+            style={{
+              backgroundColor: "#e4e4e4",
+              marginTop: "5px",
+              borderRadius: "5px",
+              width: "100%",
+              height: "0px",
+              overflow: "hidden",
+              transition: "height 1s ease",
+            }}>
+            <a
+              href="#contact"
+              style={{
+                display: "block",
+                position: "relative",
+                color: "#FA434B",
+                textDecoration: "none",
+                overflow: "hidden",
+                padding: "5px",
+                borderRadius: "5px",
+                transition: "all .5s ease",
+              }}>
+              Contact
+            </a>
+          </li>
+        </ul>
+        <div
+          style={{
+            content: "'+'",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            display: "block",
+            height: "20px",
+            width: "20px",
+            borderRadius: "100%",
+            lineHeight: "20px",
+            textAlign: "center",
+            fontSize: "1.1rem",
+            backgroundColor: "#FA434B",
+            color: "white",
+            transform: "translateY(-50%) translateX(-50%)",
+            transition: "all .3s .5s ease",
+          }}></div>
+      </div>
+    </nav>
+  );
+};
+
+export default CircularMenu;
+
