@@ -117,6 +117,22 @@ const CircularMenu = () => {
         </div>
       </div>
     </Draggable>
+
+    <style>
+        {`
+          @keyframes jump {
+            0% { 
+              transform: translateY(3px);
+            }
+            50% { 
+              transform: translateY(-15px);
+            }
+            100% { 
+              transform: translateY(3px);
+            }
+          }
+        `}
+      </style>
   );
 };
 
