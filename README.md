@@ -102,3 +102,21 @@ const CircularMenu = () => {
 };
 
 export default CircularMenu;
+
+// contentScript.js
+
+// Execute this script when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Find elements with inline styles injected by your extension
+    var elementsWithInlineStyles = document.querySelectorAll('[style*="your-inline-style-property"]');
+
+    // Iterate through the matched elements and remove the specific inline styles
+    elementsWithInlineStyles.forEach(function(element) {
+        // Check if the element has the specific inline style property set by your extension
+        if (element.style.yourInlineStyleProperty !== undefined) {
+            // Remove the specific inline style property injected by your extension
+            element.style.removeProperty('yourInlineStyleProperty');
+        }
+    });
+});
+
